@@ -6,7 +6,7 @@
 (define (pow x n)
   (cond
     ((= n 0) 1)
-    ((= (remainder n 2) 0) (pow2 (pow x (/ n 2))))
+    ((even? n) (pow2 (pow x (/ n 2))))
     (else (* x (pow x (- n 1))))))
 
 (assert= 1 (pow 2 0))
