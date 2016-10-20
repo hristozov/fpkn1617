@@ -7,11 +7,15 @@
 ; да вадим последните му m цифри и да ги сравним с a. Ако a се съдържа в n, на
 ; някоя от стъпките този остатък ще е равен на a.
 (define (substr? n a)
-  (define (helper i)
+  (define (ends-with? n a)
+    (= a
+       (remainder n
+                  (expt 10 (count-digits-iter a)))))
+  (define (helper current)
     (cond
-       ((< i a) #f)
-       ((= a (remainder i (expt 10 (count-digits-iter a)))) #t)
-       (else (helper (quotient i 10)))))
+      ((< current a) #f)
+      ((ends-with? current a) #t)
+      (else (helper (quotient current 10)))))
   (helper n))
 
 (assert-true (substr? 1234 23))
