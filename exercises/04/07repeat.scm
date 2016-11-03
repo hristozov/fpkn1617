@@ -1,5 +1,8 @@
 (load "../../lib/scm/unit.scm")
-(load "03composition.scm")
+
+(define (compose f g)
+  (lambda (x)
+    (g (f x))))
 
 ; Целта на задачата е да се напише (repeat-n f n), която изчислява n-тото
 ; „влагане“ на функцията f от вида: f(f(f(...f(x)))), където n е „дълбочината“
