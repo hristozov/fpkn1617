@@ -6,6 +6,7 @@
 
 (assert-equal '(4 9 25) (squares '(2 3 5)))
 
+; Сума на квадратите на четните числа в списъка l.
 (define (even-squares l)
   (squares (filter even? l)))
 
