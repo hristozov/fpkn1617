@@ -1,5 +1,7 @@
 (load "../../lib/scm/unit.scm")
 
+; Връща n-тата колона на матрица. Достатъчно е да map-нем „вземи n-тия елемент“
+; върху всички редове в матрицата.
 (define (get-nth-column m n)
   (map (lambda (row)
          (list-ref row n))
