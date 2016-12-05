@@ -1,3 +1,4 @@
+; Слива два сортирани списъкал
 (define (merge-lists l1 l2)
   (cond
     ((null? l1) l2)
