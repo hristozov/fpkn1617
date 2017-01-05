@@ -1,6 +1,9 @@
-import Unit
+import           Unit
 
+diagonal :: [[b]] -> [b]
 diagonal m = map (\idx -> (m !! idx) !! idx) [0..(length m - 1)]
+
+secondDiagonal :: [[b]] -> [b]
 secondDiagonal m = map (\idx -> (m !! idx) !! (length m - idx - 1)) [0..(length m - 1)]
 
 main = do {

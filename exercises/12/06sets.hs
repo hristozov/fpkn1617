@@ -1,15 +1,18 @@
-import Unit
+import           Unit
 
+union :: Eq a => [a] -> [a] -> [a]
 union [] l = l
 union (x:xs) l = if x `elem` l
   then xs `union` l
   else x : xs `union` l
 
+intersection :: Eq a => [a] -> [a] -> [a]
 intersection [] l = []
 intersection (x:xs) l = if x `elem` l
   then x : xs `intersection` l
   else xs `intersection` l
 
+difference :: Eq a => [a] -> [a] -> [a]
 difference [] l = []
 difference (x:xs) l = if x `elem` l
   then xs `difference` l

@@ -1,7 +1,10 @@
-import Unit
+import           Unit
 
--- flip' :: (a -> b -> c) -> b -> a -> c
+flip' :: (a -> b -> c) -> b -> a -> c
 flip' f = \x y -> f y x
+
+-- втори варинт, с currying
+flip2' :: (a -> b -> c) -> b -> a -> c
 flip2' f x y = f y x
 
 main =

@@ -1,11 +1,14 @@
-import Unit
+import           Unit
 
+filterMatrix :: (a -> Bool) -> [[a]] -> [[a]]
 filterMatrix p m = map (\row -> filter p row) m
 
 -- Втори вариант - с currying в lambda-та.
+filterMatrix2 :: (a -> Bool) -> [[a]] -> [[a]]
 filterMatrix2 p m = map (filter p) m
 
 -- Трети вариант - с currying и за параметъра m.
+filterMatrix3 :: (a -> Bool) -> [[a]] -> [[a]]
 filterMatrix3 p = map (filter p)
 
 main = do {

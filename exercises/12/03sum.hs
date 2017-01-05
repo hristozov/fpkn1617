@@ -1,6 +1,7 @@
-import Unit
+import           Unit
 
-sum' [] = 0
+sum' :: Num t => [t] -> t
+sum' []     = 0
 sum' (x:xs) = x + sum' xs
 
 main = do {

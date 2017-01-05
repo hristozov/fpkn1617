@@ -1,7 +1,9 @@
-import Unit
+import           Unit
 
+head' :: [t] -> t
 head' (x:xs) = x
 
+tail' :: [t] -> [t]
 tail' (x:xs) = xs
 
 main = do {

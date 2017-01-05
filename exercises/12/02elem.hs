@@ -1,6 +1,7 @@
-import Unit
+import           Unit
 
-elem' x [] = False
+elem' :: Eq t => t -> [t] -> Bool
+elem' x []     = False
 elem' x (y:ys) = x == y || elem' x ys
 
 {- невалидно: elem' x (x:xs) = True -}
