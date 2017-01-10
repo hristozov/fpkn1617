@@ -5,3 +5,4 @@
 * синтаксис за ламбда функции, пример с `flip`
 * функции от по-висок ред за работа със списъци - `map` и `filter`; примери (включително с currying) - `evens`, `square`
 * работа с матрици чрез `map` и `filter`: `filterMatrix`, `getColumn`, `diagonal`, `transpose`
+* „завъртане“ на елементите в списък - `rotate`
