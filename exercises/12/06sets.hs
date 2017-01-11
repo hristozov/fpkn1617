@@ -1,5 +1,7 @@
 import           Unit
 
+-- Познатите ни от Scheme операции с множества.
+
 union :: Eq a => [a] -> [a] -> [a]
 union [] l = l
 union (x:xs) l = if x `elem` l

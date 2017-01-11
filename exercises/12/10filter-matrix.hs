@@ -1,5 +1,6 @@
 import           Unit
 
+-- Филтриране на елементи в матрица.
 filterMatrix :: (a -> Bool) -> [[a]] -> [[a]]
 filterMatrix p m = map (\row -> filter p row) m
 
@@ -7,7 +8,10 @@ filterMatrix p m = map (\row -> filter p row) m
 filterMatrix2 :: (a -> Bool) -> [[a]] -> [[a]]
 filterMatrix2 p m = map (filter p) m
 
--- Трети вариант - с currying и за параметъра m.
+-- Трети вариант - с currying и за параметъра m. Ако даден параметър е
+-- най-вдясно в сигнатурата на функцията и се използва най-вдясно в извикването
+-- в тялото на тази функция, то можем да го пропуснем. Така реално правим
+-- currying за функцията map.
 filterMatrix3 :: (a -> Bool) -> [[a]] -> [[a]]
 filterMatrix3 p = map (filter p)
 

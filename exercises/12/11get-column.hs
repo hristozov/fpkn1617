@@ -1,5 +1,6 @@
 import           Unit
 
+-- n-та колона в матрица.
 getColumn :: [[b]] -> Int -> [b]
 getColumn m n = map (\row -> row !! n) m
 

@@ -1,5 +1,6 @@
 import           Unit
 
+-- Наша версия на вградената функция sum.
 sum' :: Num t => [t] -> t
 sum' []     = 0
 sum' (x:xs) = x + sum' xs
