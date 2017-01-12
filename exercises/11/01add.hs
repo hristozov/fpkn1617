@@ -1,9 +1,12 @@
-import Unit
+import           Unit
 
+addTwo :: Num a => a -> a
 addTwo x = x + 2
 
+add :: Num a => a -> a -> a
 add x y = x + y
 
+addFour :: Integer -> Integer
 addFour = add 4
 
 main = do {

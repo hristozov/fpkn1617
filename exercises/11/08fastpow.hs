@@ -1,5 +1,6 @@
-import Unit
+import           Unit
 
+fpow :: (Integral a, Floating a1) => a1 -> a -> a1
 fpow x 0 = 1
 fpow x n = if even n
   then fpow x (n `div` 2) ** 2

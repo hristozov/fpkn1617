@@ -1,17 +1,20 @@
-import Unit
+import           Unit
 
 -- първи вариант - с if
+fact :: (Eq t, Num t) => t -> t
 fact n = if n == 1
   then 1
   else n * fact (n - 1)
 
 -- втори вариант - с guard
 -- забележете индентирането пред | - без него няма да работи
+fact2 :: (Eq t, Num t) => t -> t
 fact2 n
   | n == 1 = 1
   | otherwise = n * fact2 (n - 1)
 
 -- трети вариант - с pattern matching
+fact3 :: (Eq t, Num t) => t -> t
 fact3 1 = 1
 fact3 n = n * fact3 (n - 1)
 

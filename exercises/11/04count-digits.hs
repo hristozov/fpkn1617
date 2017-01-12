@@ -1,11 +1,13 @@
-import Unit
+import           Unit
 
 -- първи вариант - с if
+countDigits :: (Num t, Integral t1) => t1 -> t
 countDigits n = if n < 10
   then 1
   else 1 + countDigits (div n 10)
 
 -- втори вариант - с guard
+countDigits2 :: (Num t, Integral t1) => t1 -> t
 countDigits2 n
   | n < 10 = 1
   | otherwise = 1 + countDigits2 (div n 10)
