@@ -8,7 +8,11 @@ square l = map (\x -> x ^ 2) l
 -- currying, където аргументите се фиксират първо по-предните аргументи.
 square2 l = map (^ 2) l
 
+-- и с нормален currying:
+square3 = map (^ 2)
+
 main = do {
-  assertEqual [1,4,9,16,25,36,49,64,81] (square [1..9]);
-  assertEqual [1,4,9,16,25,36,49,64,81] (square2 [1..9]);
+  assertEqual [1,4,9,16,25,36,49,64,81] $ square [1..9];
+  assertEqual [1,4,9,16,25,36,49,64,81] $ square2 [1..9];
+  assertEqual [1,4,9,16,25,36,49,64,81] $ square3 [1..9]
 }

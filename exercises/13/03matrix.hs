@@ -6,6 +6,4 @@ matrixElements m =
                j<-[0..length(head m) - 1],
                even(i + j)]
 
-main = do {
-  assertEqual [1,3,5,7,9] (matrixElements [[1,2,3], [4,5,6], [7,8,9]])
-}
+main = assertEqual [1,3,5,7,9] $ matrixElements [[1,2,3], [4,5,6], [7,8,9]]

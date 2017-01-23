@@ -19,8 +19,8 @@ fact3 1 = 1
 fact3 n = n * fact3 (n - 1)
 
 main = do {
-  assertEqual 2 (fact 2);
-  assertEqual 24 (fact 4);
-  assertEqual 2 (fact2 2);
-  assertEqual 24 (fact2 4)
+  assertEqual 2 $ fact 2;
+  assertEqual 24 $ fact 4;
+  assertEqual 2 $ fact2 2;
+  assertEqual 24 $ fact2 4
 }

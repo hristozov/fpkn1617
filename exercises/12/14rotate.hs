@@ -13,11 +13,11 @@ rotate l n
  | otherwise = rotate (tail l ++ [head l]) (n - 1)
 
 main = do {
-     assertEqual [1,2,3] (rotate [1,2,3] 0);
-     assertEqual [2,3,1] (rotate [1,2,3] 1);
-     assertEqual [1,2,3] (rotate [1,2,3] 3);
-     assertEqual [2,3,1] (rotate [1,2,3] 4);
-     assertEqual [3,1,2] (rotate [1,2,3] (-1));
-     assertEqual [3,1,2] (rotate [1,2,3] (-4));
-     assertEqual [2,3,1] (rotate [1,2,3] (-5))
+     assertEqual [1,2,3] $ rotate [1,2,3] 0;
+     assertEqual [2,3,1] $ rotate [1,2,3] 1;
+     assertEqual [1,2,3] $ rotate [1,2,3] 3;
+     assertEqual [2,3,1] $ rotate [1,2,3] 4;
+     assertEqual [3,1,2] $ rotate [1,2,3] $ -1;
+     assertEqual [3,1,2] $ rotate [1,2,3] $ -4;
+     assertEqual [2,3,1] $ rotate [1,2,3] $ -5
 }

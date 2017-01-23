@@ -18,8 +18,8 @@ main =
     lt = flip' gte
     lt2 = flip2' gte2
   in do {
-    assertFalse (gte 1 3);
-    assertTrue (lt 1 3);
-    assertFalse (gte2 1 3);
-    assertTrue (lt2 1 3)
+    assertFalse $ gte 1 3;
+    assertTrue $ lt 1 3;
+    assertFalse $ gte2 1 3;
+    assertTrue $ lt2 1 3
   }

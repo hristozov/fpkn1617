@@ -10,7 +10,7 @@ addFour :: Integer -> Integer
 addFour = add 4
 
 main = do {
-  assertEqual 5 (addTwo 3);
-  assertEqual 7 (add 3 4);
-  assertEqual 11 (addFour 7)
+  assertEqual 5 $ addTwo 3;
+  assertEqual 7 $ add 3 4;
+  assertEqual 11 $ addFour 7
 }

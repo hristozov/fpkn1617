@@ -21,11 +21,11 @@ fibonacci3 n = fib 1 1 1 where
       else fib current (previous + current) (i + 1)
 
 main = do {
-  assertEqual 2 (fibonacci 2);
-  assertEqual 5 (fibonacci 4);
-  assertEqual 2 (fibonacci2 2);
-  assertEqual 5 (fibonacci2 4);
-  assertEqual 2 (fibonacci3 2);
-  assertEqual 5 (fibonacci3 4);
-  assertEqual 2504730781961 (fibonacci3 60)
+  assertEqual 2 $ fibonacci 2;
+  assertEqual 5 $ fibonacci 4;
+  assertEqual 2 $ fibonacci2 2;
+  assertEqual 5 $ fibonacci2 4;
+  assertEqual 2 $ fibonacci3 2;
+  assertEqual 5 $ fibonacci3 4;
+  assertEqual 2504730781961 $ fibonacci3 60
 }

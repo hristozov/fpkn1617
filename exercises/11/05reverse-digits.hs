@@ -24,13 +24,13 @@ reverseDigits3 n = let
   in helper n 0
 
 main = do {
-  assertEqual 1 (reverseDigits 1);
-  assertEqual 123 (reverseDigits 321);
-  assertEqual 1 (reverseDigits 100000);
-  assertEqual 1 (reverseDigits2 1);
-  assertEqual 123 (reverseDigits2 321);
-  assertEqual 1 (reverseDigits2 100000);
-  assertEqual 1 (reverseDigits3 1);
-  assertEqual 123 (reverseDigits3 321);
-  assertEqual 1 (reverseDigits3 100000)
+  assertEqual 1 $ reverseDigits 1;
+  assertEqual 123 $ reverseDigits 321;
+  assertEqual 1 $ reverseDigits 100000;
+  assertEqual 1 $ reverseDigits2 1;
+  assertEqual 123 $ reverseDigits2 321;
+  assertEqual 1 $ reverseDigits2 100000;
+  assertEqual 1 $ reverseDigits3 1;
+  assertEqual 123 $ reverseDigits3 321;
+  assertEqual 1 $ reverseDigits3 100000
 }

@@ -21,15 +21,15 @@ difference (x:xs) l = if x `elem` l
   else x : xs `difference` l
 
 main = do {
-  assertEqual [1] ([1] `union` []);
-  assertEqual [1] ([] `union` [1]);
-  assertEqual [1] ([1] `union` [1]);
-  assertEqual [1, 2] ([1] `union` [2]);
-  assertEqual [1, 2, 3] ([1, 2] `union` [2, 3]);
-  assertEqual [1] ([1, 2] `intersection` [1, 3]);
-  assertEqual [] ([4, 2] `intersection` [1, 3]);
-  assertEqual [] ([1, 2] `difference` [1, 2]);
-  assertEqual [] ([1, 2] `difference` [1, 2, 3]);
-  assertEqual [4] ([1, 2, 4] `difference` [1, 2, 3]);
-  assertEqual [4, 5] ([4, 5] `difference` [1, 2, 3]);
+  assertEqual [1] $ [1] `union` [];
+  assertEqual [1] $ [] `union` [1];
+  assertEqual [1] $ [1] `union` [1];
+  assertEqual [1, 2] $ [1] `union` [2];
+  assertEqual [1, 2, 3] $ [1, 2] `union` [2, 3];
+  assertEqual [1] $ [1, 2] `intersection` [1, 3];
+  assertEqual [] $ [4, 2] `intersection` [1, 3];
+  assertEqual [] $ [1, 2] `difference` [1, 2];
+  assertEqual [] $ [1, 2] `difference` [1, 2, 3];
+  assertEqual [4] $ [1, 2, 4] `difference` [1, 2, 3];
+  assertEqual [4, 5] $ [4, 5] `difference` [1, 2, 3];
 }
