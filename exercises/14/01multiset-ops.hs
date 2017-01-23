@@ -14,7 +14,4 @@ multiUnion (x:xs) y =
     restX = removeAll x xs
     restY = removeAll x y
 
-main = do {
-    assertEqual [0,1,2,2,3,4] (multiUnion [0,1,2,3] [2,2,3,4])
-}
-
+main = assertEqual [0,1,2,2,3,4] $ multiUnion [0,1,2,3] [2,2,3,4]
