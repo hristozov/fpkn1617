@@ -15,8 +15,8 @@ qsort2 (x:xs) = lessThan ++ [x] ++ moreThan where
   moreThan = qsort2(filter (>x) xs)
 
 main = do {
-  assertEqual [1,2,3] (qsort [1,2,3]);
-  assertEqual [1,2,4,7,8] (qsort [8,4,1,7,2]);
-  assertEqual [1,2,3] (qsort2 [1,2,3]);
-  assertEqual [1,2,4,7,8] (qsort2 [8,4,1,7,2])
+  assertEqual [1,2,3] $ qsort [1,2,3];
+  assertEqual [1,2,4,7,8] $ qsort [8,4,1,7,2];
+  assertEqual [1,2,3] $ qsort2 [1,2,3];
+  assertEqual [1,2,4,7,8] $ qsort2 [8,4,1,7,2]
 }

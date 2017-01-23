@@ -9,10 +9,8 @@ returnNext c
 
 iterate' f x = x : iterate' f (f x)
 
-rot13Char c = (iterate returnNext c) !! 13
+rot13Char c = iterate returnNext c !! 13
 
-rot13 s = map rot13Char s
+rot13 = map rot13Char
 
-main = do {
-    assertEqual "Uryyb, jbeyq!" $ rot13 "Hello, world!"
-}
+main = assertEqual "Uryyb, jbeyq!" $ rot13 "Hello, world!"

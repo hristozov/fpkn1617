@@ -6,4 +6,4 @@ tribonacci = helper 1 1 1 where
 
 -- може и да map-нем реализация на trib върху [1..]
 
-main = assertEqual [1,3,5,9,17,31,57,105,193,355] (take 10 tribonacci)
+main = assertEqual [1,3,5,9,17,31,57,105,193,355] $ take 10 tribonacci
