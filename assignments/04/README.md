@@ -1,5 +1,5 @@
 # Медиани
-([задание в Moodle](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=78254))
+([задание в Moodle](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=79792))
 
 Нека `l` е (потенциално безкраен) непразен списък, съставен от „залепяне“ на монотонно растящи списъци. Например:
 
