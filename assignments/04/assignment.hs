@@ -1,8 +1,18 @@
 import           Unit
 
--- не е задължително да се придържате към тази типова сигнатура съвсем стриктно
+sublists :: Ord t => [t] -> [[t]]
+sublists l = helper l [] where
+  helper :: Ord t => [t] -> [t] -> [[t]]
+  helper [] current = [current]
+  helper (x:xs) current
+    | null current || x > last current = helper xs (current ++ [x])
+    | otherwise = current : helper xs [x]
+
+median :: [a] -> a
+median l = l !! (length l `div` 2)
+
 solution :: Ord a => [a] -> [a]
-solution l = l
+solution l = map median $ sublists l
 
 main = do {
   assertEqual [1,2,3,9,1] $ solution [1,1,2,3,1,2,3,4,5,5,9,15,1];
